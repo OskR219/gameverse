@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply w-screen h-screen overflow-hidden font-luckiest text-white text-opacity-75;
+  background: url("assets/bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 0 0.1em 20px rgb(115, 115, 115, 0.05),
+    0.05em -0.03em 0 rgb(115, 115, 115, 0.05),
+    0.05em 0.005em 0 rgb(115, 115, 115, 0.05),
+    0em 0.08em 0 rgb(115, 115, 115, 0.05),
+    0.05em 0.08em 0 rgb(115, 115, 115, 0.05),
+    0px -0.03em 0 rgb(115, 115, 115, 0.05),
+    -0.03em -0.03em 0 rgb(115, 115, 115, 0.05),
+    -0.03em 0.08em 0 rgb(115, 115, 115, 0.05),
+    -0.03em 0 0 rgb(115, 115, 115, 0.05);
+}
