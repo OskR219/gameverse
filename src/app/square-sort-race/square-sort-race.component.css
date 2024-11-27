@@ -1,35 +1,35 @@
 :host ::ng-deep app-square:nth-child(7) {
-  @apply bg-neutral-400 bg-opacity-75 rounded-tl-lg;
+  @apply bg-neutral-100 bg-opacity-50 rounded-tl-lg;
 }
 
 :host ::ng-deep app-square:nth-child(8) {
-  @apply bg-neutral-400 bg-opacity-75;
+  @apply bg-neutral-100 bg-opacity-50;
 }
 
 :host ::ng-deep app-square:nth-child(9) {
-  @apply bg-neutral-400 bg-opacity-75 rounded-tr-lg;
+  @apply bg-neutral-100 bg-opacity-50 rounded-tr-lg;
 }
 
 :host ::ng-deep app-square:nth-child(12) {
-  @apply bg-neutral-400 bg-opacity-75;
+  @apply bg-neutral-100 bg-opacity-50;
 }
 
 :host ::ng-deep app-square:nth-child(13) {
-  @apply bg-neutral-400 bg-opacity-75;
+  @apply bg-neutral-100 bg-opacity-50;
 }
 
 :host ::ng-deep app-square:nth-child(14) {
-  @apply bg-neutral-400 bg-opacity-75;
+  @apply bg-neutral-100 bg-opacity-50;
 }
 
 :host ::ng-deep app-square:nth-child(17) {
-  @apply bg-neutral-400 bg-opacity-75 rounded-bl-lg;
+  @apply bg-neutral-100 bg-opacity-50 rounded-bl-lg;
 }
 
 :host ::ng-deep app-square:nth-child(18) {
-  @apply bg-neutral-400 bg-opacity-75;
+  @apply bg-neutral-100 bg-opacity-50;
 }
 
 :host ::ng-deep app-square:nth-child(19) {
-  @apply bg-neutral-400 bg-opacity-75 rounded-br-lg;
+  @apply bg-neutral-100 bg-opacity-50 rounded-br-lg;
 }

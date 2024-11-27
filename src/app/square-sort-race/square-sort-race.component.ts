@@ -25,7 +25,8 @@ import {
 })
 export class SquareSortRaceComponent implements AfterViewInit {
   private readonly changeDetectorRef = inject(ChangeDetectorRef);
-  private isPlaying = false;
+  isPlaying = false;
+  moves = 0;
   private isMoving = false;
   private random: Random = new Random('adc');
   protected target = [
@@ -180,6 +181,7 @@ export class SquareSortRaceComponent implements AfterViewInit {
         this.squares[this.emptySquare] = movedSquare;
         this.emptySquare = movingSquareIndex;
         this.isMoving = false;
+        this.moves++;
         resolve();
       });
     });
@@ -198,9 +200,52 @@ export class SquareSortRaceComponent implements AfterViewInit {
       this.squares[18].color,
     ];
     if (this.target.every((t, i) => solution[i] === t)) {
-      console.log('Win');
+      this.win();
     } else {
       console.log('Not win');
     }
+  }
+
+  win() {
+    this.isPlaying = false;
+    const solution = [
+      this.squares[6],
+      this.squares[7],
+      this.squares[8],
+      this.squares[11],
+      this.squares[12],
+      this.squares[13],
+      this.squares[16],
+      this.squares[17],
+      this.squares[18],
+    ];
+    (async () => {
+      for (let i = 0; i < this.target.length; i++) {
+        await solution[i].highlight();
+      }
+    })();
+  }
+
+  finish() {
+    this.win();
+    this.isPlaying = false;
+    const solution = [
+      this.squares[6],
+      this.squares[7],
+      this.squares[8],
+      this.squares[11],
+      this.squares[12],
+      this.squares[13],
+      this.squares[16],
+      this.squares[17],
+      this.squares[18],
+    ];
+
+    (async () => {
+      for (let i = 0; i < this.target.length; i++) {
+        const points = solution[i].color === this.target[i] ? 5 : 0;
+        await solution[i].score(points);
+      }
+    })();
   }
 }

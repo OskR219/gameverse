@@ -1,6 +1,8 @@
-<div class="h-full w-full flex flex-row align-middle p-1 sm:p-2" #square>
+<div class="h-full w-full flex flex-row align-middle p-1 sm:p-2 relative" #square>
   <div
-    class="h-full w-full bg-gradient-to-br rounded-lg border border-neutral-100 shadow-sm"
+    class="h-full w-full bg-gradient-to-br rounded-lg border border-neutral-100 shadow-sm flex justify-center items-center"
     [ngClass]="mapColorToClass[color]"
-  ></div>
+  >
+    <div class="text-xl xs:text-2xl sm:text-3xl" #score>@if(showScore) { +{{points}} }</div>
+  </div>
 </div>
